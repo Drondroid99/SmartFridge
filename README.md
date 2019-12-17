@@ -1,2 +1,3 @@
 # SmartFridge
-Team project for BI programming
+Team project for BI programming course
+
