@@ -1,0 +1,24 @@
+﻿<Window x:Class="SmartFridge.ProductMenuPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartFridge"
+        mc:Ignorable="d"
+        Title="ProductMenuPage" Height="450" Width="800">
+    <Grid Background="PowderBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="button1" Width="320" Height="60" Content="Фрукты" Click="Button_Click_LogIn" FontSize="24" Grid.Row="0" Background ="BlanchedAlmond" Panel.ZIndex="10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <Button x:Name="button2" Width="320" Height="60" Content="Овощи" Click="Button_Click_Registration" FontSize="24" Grid.Row="1" Background ="BlanchedAlmond" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <Button x:Name="button4" Width="320" Height="60" Content="Мясо" Click="Button_Click_History" FontSize="24" Grid.Row="2" Background ="BlanchedAlmond" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold" />
+        <Button x:Name="button5" Width="320" Height="60" Content="Морепродукты" Click="Button_Click_History" FontSize="24" Grid.Row="3" Background ="BlanchedAlmond" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold" />
+        <Button x:Name="button6" Width="320" Height="60" Content="Крупы и мучные изделия" Click="Button_Click_History" FontSize="24" Grid.Row="4" Background ="BlanchedAlmond" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold" />
+    </Grid>
+</Window>
