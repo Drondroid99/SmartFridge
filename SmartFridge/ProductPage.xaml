@@ -19,7 +19,9 @@
         <Label Content="{Binding TitleLabel}" Grid.Column="0" Grid.Row="0" Height="40" Margin="20,30,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="20" Background="White"/>
         <Label Content="{Binding CategoryLabel}" Grid.Column="0" Grid.Row="0" Height="35" Margin="20,80,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16" Background="White"/>
         <Label Content="{Binding ExDateLabel, ValidatesOnExceptions=True, Converter={StaticResource DaysConverter}}" Grid.Column="0" Grid.Row="0" Height="35"  Margin="20,125,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16" Background="White"/>
-        <Label Content="{Binding CountLabel}" Grid.Column="0" Grid.Row="0" Height="35" Margin="20,170,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16" Background="White"/>
+        
+
+
 
         <ScrollViewer Grid.Column="1" Grid.Row="1" Margin="20,5,20,30" VerticalScrollBarVisibility="Auto" Background="White">
             <Grid>
@@ -40,7 +42,26 @@
                 <Image Source="Images/calories.png" Stretch="UniformToFill" Margin="7,7,7,7"/>
                 <Label Content="Калории" VerticalAlignment="Center" FontFamily="Verdana"/>
             </StackPanel>
-            
+            <Label Grid.Row="0" Content="{Binding CaloriesLabel}"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Image Source="Images/protein.png" Stretch="UniformToFill" Margin="10,10,10,10"/>
+                <Label Content="Белки" VerticalAlignment="Center" FontFamily="Verdana"/>
+            </StackPanel>
+            <Label Grid.Row="1" Content="{Binding ProteinsLabel}"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Image Source="Images/fats.png" Stretch="UniformToFill" Margin="10,10,10,10"/>
+                <Label Content="Жиры" VerticalAlignment="Center" FontFamily="Verdana"/>
+            </StackPanel>
+            <Label Grid.Row="2" Content="{Binding FatsLabel}"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
+
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <Image Source="Images/carbohydrate.png" Stretch="UniformToFill" Margin="10,10,10,10"/>
+                <Label Content="Углеводы" VerticalAlignment="Center" FontFamily="Verdana"/>
+            </StackPanel>
+            <Label Grid.Row="3" Content="{Binding CarboLabel}"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
+
         </Grid>
     </Grid>
 </Window>

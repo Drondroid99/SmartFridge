@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="FridgePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ListOfRecipes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,15 +22,27 @@
     <Compile Update="ProductPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ProductsListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RecipePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="RecipesListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RecipesMenuPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainMenu.xaml">
+    <Page Update="FridgePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="ListOfRecipes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProductMenuPage.xaml">
@@ -33,7 +51,16 @@
     <Page Update="ProductPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ProductsListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RecipePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="RecipesListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RecipesMenuPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

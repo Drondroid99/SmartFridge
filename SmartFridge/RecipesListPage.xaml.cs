@@ -21,5 +21,17 @@ namespace SmartFridge
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            RecipesMenuPage window = new RecipesMenuPage();
+            window.Show();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            ListOfRecipes window = new ListOfRecipes();
+            window.Show();
+        }
     }
 }

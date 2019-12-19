@@ -24,17 +24,21 @@ namespace SmartFridge
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            FridgePage window = new FridgePage();
+            window.Show();
+            //Close();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-
+            RecipesListPage window = new RecipesListPage();
+            window.Show();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-
+            ProductMenuPage window = new ProductMenuPage();
+            window.Show();
         }
     }
 }
