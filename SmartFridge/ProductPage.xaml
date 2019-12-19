@@ -18,7 +18,7 @@
         <Image Source ="{Binding ImageSource}" Grid.Column="1" Grid.Row="0" Margin="20,30,20,20" HorizontalAlignment="Center"/>
         <Label Content="{Binding TitleLabel}" Grid.Column="0" Grid.Row="0" Height="40" Margin="20,30,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="20" Background="White"/>
         <Label Content="{Binding CategoryLabel}" Grid.Column="0" Grid.Row="0" Height="35" Margin="20,80,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16" Background="White"/>
-        <Label Content="{Binding ExDateLabel, ValidatesOnExceptions=True, Converter={StaticResource DaysConverter}}" Grid.Column="0" Grid.Row="0" Height="35"  Margin="20,125,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16" Background="White"/>
+        <!--<Label Content="{Binding ExDateLabel, ValidatesOnExceptions=True, Converter={StaticResource DaysConverter}}" Grid.Column="0" Grid.Row="0" Height="35"  Margin="20,125,5,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16" Background="White"/>-->
         
 
 

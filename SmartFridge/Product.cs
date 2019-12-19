@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Linq.Mapping;
 
-namespace SmartFridge1
+namespace SmartFridge
 {
     [Table(Name = "Products")]
-    class Product
+    public class Product
     {
         [Column(IsPrimaryKey = true, Storage = "Id_P", IsDbGenerated = true)]
         public int id_P { get; set; }

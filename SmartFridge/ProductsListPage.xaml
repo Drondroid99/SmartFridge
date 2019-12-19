@@ -10,6 +10,14 @@
       FontFamily="Verdana"
       FontSize="16">
     <Grid>
-        <ListBox FontFamily="Verdana" SelectionMode="Single" Margin="50" ItemsSource="{Binding ProductList}" SelectedItem="{Binding SelectedProduct}"/>
+        <ListBox Name="list" FontFamily="Verdana" SelectionMode="Single" Margin="50" SelectedItem="{Binding SelectedProduct}"  SelectionChanged="list_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="16" Text="{Binding Path=name}" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
