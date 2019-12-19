@@ -1,0 +1,21 @@
+﻿<Window x:Class="SmartFridge.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartFridge"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="450" Width="800">
+    <Grid Background="PowderBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="button1" Width="200" Height="60" Content="Холодильник" Click="button1_Click" FontSize="24" Grid.Row="0" Background ="BlanchedAlmond" Panel.ZIndex="10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <Button x:Name="button2" Width="200" Height="60" Content="Рецепты" Click="button2_Click" FontSize="24" Grid.Row="1" Background ="BlanchedAlmond" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <Button x:Name="button3" Width="200" Height="60" Content="Продукты" Click="button3_Click" FontSize="24" Grid.Row="3" Background ="BlanchedAlmond" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold" />
+        
+    </Grid>
+</Window>
