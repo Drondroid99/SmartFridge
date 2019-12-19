@@ -25,8 +25,9 @@ namespace SmartFridge
         SqlConnection sqlConnection;
         private int ListType;
 
-        public ProductsListPage()
+        public ProductsListPage(int type)
         {
+            ListType = type;
             InitializeComponent();
             InizializeList();
             list.ItemsSource = ProductList;
@@ -41,38 +42,7 @@ namespace SmartFridge
 
             SqlDataReader sqlReader = null;
 
-            string sqlExpression = "select * from [Products]";
-
-            /*switch (ListType)
-            {
-                case 1:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type=N'Мясо' ORDER BY Title";
-                    break;
-                case 2:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type=N'Морепродукты' ORDER BY Title";
-                    break;
-                case 3:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type=N'Овощи' ORDER BY Title";
-                    break;
-                case 4:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type=N'Фрукты' ORDER BY Title";
-                    break;
-                case 5:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type LIKE N'Молочные%' ORDER BY Title";
-                    break;
-                case 6:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type LIKE N'Крупы%' ORDER BY Title";
-                    break;
-                case 7:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type=N'Птица' ORDER BY Title";
-                    break;
-                case 8:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type LIKE N'Травы%' ORDER BY Title";
-                    break;
-                case 9:
-                    sqlExpression = "SELECT * FROM [Products] WHERE Type=N'Разное' ORDER BY Title";
-                    break;
-            }*/
+            string sqlExpression = $"SELECT * FROM [Products] WHERE Category={ListType} ORDER BY Name";
 
             SqlCommand command = new SqlCommand(sqlExpression, sqlConnection);
 
@@ -110,7 +80,7 @@ namespace SmartFridge
 
         private void list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ProductPage window = new ProductPage();
+            var window = new ProductPage();
             window.Show();
         }
     }

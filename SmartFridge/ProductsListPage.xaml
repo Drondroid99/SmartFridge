@@ -10,7 +10,7 @@
       FontFamily="Verdana"
       FontSize="16">
     <Grid>
-        <ListBox Name="list" FontFamily="Verdana" SelectionMode="Single" Margin="50" SelectedItem="{Binding SelectedProduct}"  SelectionChanged="list_SelectionChanged">
+        <ListBox Name="list" FontFamily="Verdana" SelectionMode="Single" Margin="50" SelectedItem="{Binding SelectedProduct}" SelectionChanged="list_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
