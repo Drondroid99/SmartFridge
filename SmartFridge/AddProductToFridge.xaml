@@ -24,24 +24,27 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="Название:" Grid.Column="0" Grid.Row="0" TextWrapping="WrapWithOverflow" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
         <TextBlock Text="Категория:" Grid.Column="0" Grid.Row="1" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
-        <TextBlock Text="Белки:" Grid.Column="0" Grid.Row="2" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
-        <TextBlock Text="Жиры:" Grid.Column="0" Grid.Row="3" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
-        <TextBlock Text="Углеводы:" Grid.Column="0" Grid.Row="4" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
-        <TextBlock Text="Срок годности (дней):" Grid.Column="0" Grid.Row="5" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <TextBlock Text="Калории:" Grid.Column="0" Grid.Row="2" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <TextBlock Text="Белки:" Grid.Column="0" Grid.Row="3" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <TextBlock Text="Жиры:" Grid.Column="0" Grid.Row="4" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <TextBlock Text="Углеводы:" Grid.Column="0" Grid.Row="5" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+        <TextBlock Text="Срок годности (дней):" Grid.Column="0" Grid.Row="6" Margin="10,10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
 
 
         <TextBox Name="Name" Grid.Column="1" Grid.Row="0" Margin="10,10"/>
         <TextBox Name="Category" Grid.Column="1" Grid.Row="1" Margin="10,10"/>
-        <TextBox Name="Proteins" Grid.Column="1" Grid.Row="2" Margin="10,10"/>
-        <TextBox Name="Fats" Grid.Column="1" Grid.Row="3" Margin="10,10"/>
-        <TextBox Name="Carbohydrates" Grid.Column="1" Grid.Row="4" Margin="10,10"/>
-        <TextBox Name="Merge" Grid.Column="1" Grid.Row="5" Margin="10,10"/>
+        <TextBox Name="Calories" Grid.Column="1" Grid.Row="2" Margin="10,10"/>
+        <TextBox Name="Proteins" Grid.Column="1" Grid.Row="3" Margin="10,10"/>
+        <TextBox Name="Fats" Grid.Column="1" Grid.Row="4" Margin="10,10"/>
+        <TextBox Name="Carbohydrates" Grid.Column="1" Grid.Row="5" Margin="10,10"/>
+        <TextBox Name="Merge" Grid.Column="1" Grid.Row="6" Margin="10,10"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
             <Button Content="Добавить" Width="100" Margin="5" Height="30" Click="Button_Click_1" Background="PowderBlue" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold" />
             
         </StackPanel>
