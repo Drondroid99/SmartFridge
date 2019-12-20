@@ -37,7 +37,16 @@
 
 
         <TextBox Name="Name" Grid.Column="1" Grid.Row="0" Margin="10,10"/>
-        <TextBox Name="Category" Grid.Column="1" Grid.Row="1" Margin="10,10"/>
+        <ComboBox Name="Category" Grid.Column="1" Grid.Row="1" Margin="10,10">
+            <ComboBoxItem IsSelected="True">Овощи</ComboBoxItem>
+            <ComboBoxItem >Фрукты</ComboBoxItem>
+            <ComboBoxItem>Молочные продукты</ComboBoxItem>
+            <ComboBoxItem >Морепродукты</ComboBoxItem>
+            <ComboBoxItem >Мясо</ComboBoxItem>
+            <ComboBoxItem >Крупы и мучные изделия2</ComboBoxItem>
+            <ComboBoxItem >Травы, специи, соусы</ComboBoxItem>
+            <ComboBoxItem >Разное</ComboBoxItem>
+        </ComboBox>
         <TextBox Name="Calories" Grid.Column="1" Grid.Row="2" Margin="10,10"/>
         <TextBox Name="Proteins" Grid.Column="1" Grid.Row="3" Margin="10,10"/>
         <TextBox Name="Fats" Grid.Column="1" Grid.Row="4" Margin="10,10"/>
