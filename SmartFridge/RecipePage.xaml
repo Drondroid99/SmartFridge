@@ -14,22 +14,19 @@
                 <RowDefinition Height="80"></RowDefinition>
                 <RowDefinition Height="600"></RowDefinition>
                 <RowDefinition Height="400"></RowDefinition>
-                <RowDefinition MaxHeight="500"></RowDefinition>
-                <RowDefinition MaxHeight="500"></RowDefinition>
-                <RowDefinition Height="90"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="260*"></ColumnDefinition>
                 <ColumnDefinition Width="633*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Height="50" Margin="30,20,29.2,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a">
+            <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Height="50" Margin="30,20,29.2,0" VerticalAlignment="Top" BorderThickness="3" BorderBrush="PowderBlue">
                 <DockPanel>
                     <Label Name="Title" DockPanel.Dock="Left"  FontFamily="Verdana" FontSize="20" Background="White" VerticalAlignment="Center"/>
                 </DockPanel>
             </Border>
 
-            <Border Grid.Row="1" Grid.Column="0" Margin="30,10,0,0" BorderThickness="3" BorderBrush="#8bc34a" Height="200" VerticalAlignment="Top">
+            <Border Grid.Row="1" Grid.Column="0" Margin="30,10,0,0" BorderThickness="3" BorderBrush="PowderBlue" Height="200" VerticalAlignment="Top">
                 <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
@@ -74,7 +71,7 @@
                 </Grid>
             </Border>
 
-            <Label Grid.Row="1" Grid.Column="0" Content="Пищевая ценность &#xD;&#xA;блюда на 100 грамм" Margin="30,220,0,0" Height="50" VerticalAlignment="Top" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="14"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Пищевая ценность &#xD;&#xA;блюда на 100 грамм" Margin="30,220,0,0" Height="50" VerticalAlignment="Top" BorderThickness="3" BorderBrush="PowderBlue" FontFamily="Verdana" FontSize="14"/>
             <Grid Grid.Row="1" Grid.Column="0" Margin="30,270,0,30" Height="300" VerticalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -109,7 +106,7 @@
                 <Label Grid.Row="3" Name="Carbo"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
             </Grid>
 
-            <Label Grid.Row="1" Grid.Column="1" Content="Ингредиенты:" Margin="30,30,30,30" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="Ингредиенты:" Margin="30,30,30,30" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="3" BorderBrush="PowderBlue" FontFamily="Verdana" FontSize="16"/>
             <DataGrid Grid.Row="1" Grid.Column="1" Margin="30 100 30 30" AutoGenerateColumns="False" SelectionMode="Single" Name="Ingredients" CanUserDeleteRows="False" CanUserAddRows="False" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Продукт" Binding="{Binding name}" IsReadOnly="True" Width="150"/>
@@ -120,9 +117,9 @@
                     <DataGridTextColumn Header="Калории" Binding="{Binding quantity}" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Grid.Row="2" Grid.Column="0" Content="Приготовление:" FontSize="16" BorderThickness="2" BorderBrush="#8bc34a" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Top" FontFamily="Verdana"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Приготовление:" FontSize="16" BorderThickness="2" BorderBrush="PowderBlue" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Top" FontFamily="Verdana"/>
 
-            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,50,30,30" VerticalAlignment="Top" BorderThickness="2" BorderBrush="#8bc34a">
+            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,50,30,30" VerticalAlignment="Top" BorderThickness="2" BorderBrush="PowderBlue">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <TextBlock Margin="10" FontFamily="Verdana" TextWrapping="Wrap" Name="Description" FontSize="14"/>
                 </ScrollViewer>
