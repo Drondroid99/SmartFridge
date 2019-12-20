@@ -24,49 +24,49 @@ namespace SmartFridge
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(1);
             window.Show();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(2);
             window.Show();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(3);
             window.Show();
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(4);
             window.Show();
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(5);
             window.Show();
         }
 
         private void button6_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(6);
             window.Show();
         }
 
         private void button7_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(7);
             window.Show();
         }
 
         private void button8_Click(object sender, RoutedEventArgs e)
         {
-            ListOfRecipes window = new ListOfRecipes();
+            ListOfRecipes window = new ListOfRecipes(8);
             window.Show();
         }
     }

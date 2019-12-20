@@ -9,6 +9,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace SmartFridge
 {
@@ -17,9 +21,69 @@ namespace SmartFridge
     /// </summary>
     public partial class ListOfRecipes : Window
     {
-        public ListOfRecipes()
+        private int ListType;
+        public ListOfRecipes(int type)
         {
+            ListType = type;
             InitializeComponent();
+            InizializeListofRec();
+            list.ItemsSource = RecipesList;
+        }
+
+
+
+
+
+            private async void InizializeListofRec()
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                 var sqlConnection = new SqlConnection(connectionString);
+
+                await sqlConnection.OpenAsync();
+
+                SqlDataReader sqlReader = null;
+
+                string sqlExpression = $"SELECT * FROM [Recepies] WHERE Category= {ListType} ORDER BY Name";
+
+                SqlCommand command = new SqlCommand(sqlExpression, sqlConnection);
+
+                try
+                {
+                    sqlReader = await command.ExecuteReaderAsync();
+
+                    while (await sqlReader.ReadAsync())
+                    {
+                        Recepie recipe = new Recepie(Convert.ToInt32(sqlReader["Id_R"]), Convert.ToString(sqlReader["Name"]),
+                             Convert.ToInt32(sqlReader["ExDate"]), Convert.ToInt16(sqlReader["Complexity"]),
+                             Convert.ToString(sqlReader["Description"]), Convert.ToInt32(sqlReader["WeigthForPortion"]), Convert.ToInt16(sqlReader["Portions"]),
+                            Convert.ToInt32(sqlReader["Category"]), Convert.ToString(sqlReader["Image"]),
+                            Convert.ToInt32(sqlReader["Time"]), Convert.ToSingle(sqlReader["Proteins"]),
+                            Convert.ToSingle(sqlReader["Fats"]), Convert.ToSingle(sqlReader["Carbohydrates"]),
+                             Convert.ToSingle(sqlReader["Calories"]),
+                            Convert.ToBoolean(sqlReader["In_Fridge"]));
+
+                        RecipesList.Add(recipe);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.Message.ToString(), ex.Source.ToString());
+                }
+                finally
+                {
+                    if (sqlReader != null)
+                        sqlReader.Close();
+                }
+            }
+        public ObservableCollection<Recepie> RecipesList { get; set; } = new ObservableCollection<Recepie>();
+        public Recepie SelectedRecipe { get; set; }
+        private void list_SelectionChanged(object sender, SelectionChangedEventArgs e)
+            {
+                var window = new RecipePage();
+                window.Show();
+            }
         }
     }
-}
+
+

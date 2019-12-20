@@ -15,17 +15,17 @@
         <DataGrid Name="ProductsInFridge" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Width="175" 
-                             Binding="{Binding Path=Name}"></DataGridTextColumn>
+                             Binding="{Binding Path=name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Категория" 
-                             Binding="{Binding Path=Category}"></DataGridTextColumn>
+                             Binding="{Binding Path=category}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Белки" 
-                             Binding="{Binding Path=Proteins}"></DataGridTextColumn>
+                             Binding="{Binding Path=proteins}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Жиры" 
-                             Binding="{Binding Path=Fats}"></DataGridTextColumn>
+                             Binding="{Binding Path=fats}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Углеводы" 
-                             Binding="{Binding Path=Carbohydrates}"></DataGridTextColumn>
+                             Binding="{Binding Path=carbohydrates}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Калории" 
-                             Binding="{Binding Path=Calories}"></DataGridTextColumn>
+                             Binding="{Binding Path=calories}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
