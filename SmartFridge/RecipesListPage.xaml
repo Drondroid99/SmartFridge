@@ -9,11 +9,11 @@
     <Grid Background="PowderBlue">
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            
         </Grid.RowDefinitions>
 
         <Button x:Name="button1" Width="600" Height="60" Content="Общая книга рецептов" Click="button1_Click" FontSize="24" Grid.Row="0" Background ="BlanchedAlmond" Panel.ZIndex="10" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
-        <Button x:Name="button2" Width="600" Height="60" Content="Рецепты с учетом содержимого холодильника" Click="button2_Click" FontSize="24" Grid.Row="1" Background ="BlanchedAlmond" FontFamily="Comic Sans MS, Verdana" FontWeight="Bold"/>
+       
        
 
     </Grid>
