@@ -75,12 +75,11 @@ namespace SmartFridge
         }
 
         public ObservableCollection<Product> ProductList { get; set; } = new ObservableCollection<Product>();
-
-        public Product SelectedProduct { get; set; }
-
+        public Product SelectedProduct{ get; set; }
         private void list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var window = new ProductPage();
+            var p = ((sender as ListBox).SelectedItem as Product);
+            var window = new ProductPage(p.id_P);
             window.Show();
         }
     }
