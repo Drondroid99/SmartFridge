@@ -21,7 +21,9 @@ namespace SmartFridge
     /// </summary>
     public partial class ListOfRecipes : Window
     {
+        SqlConnection sqlConnection;
         private int ListType;
+
         public ListOfRecipes(int type)
         {
             ListType = type;
@@ -37,7 +39,7 @@ namespace SmartFridge
             private async void InizializeListofRec()
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                 var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection = new SqlConnection(connectionString);
 
                 await sqlConnection.OpenAsync();
 
@@ -55,7 +57,7 @@ namespace SmartFridge
                     {
                         Recepie recipe = new Recepie(Convert.ToInt32(sqlReader["Id_R"]), Convert.ToString(sqlReader["Name"]),
                              Convert.ToInt32(sqlReader["ExDate"]), Convert.ToInt16(sqlReader["Complexity"]),
-                             Convert.ToString(sqlReader["Description"]), Convert.ToInt32(sqlReader["WeigthForPortion"]), Convert.ToInt16(sqlReader["Portions"]),
+                             Convert.ToString(sqlReader["Description"]), Convert.ToInt32(sqlReader["WeightForPortion"]), Convert.ToInt16(sqlReader["Portions"]),
                             Convert.ToInt32(sqlReader["Category"]), Convert.ToString(sqlReader["Image"]),
                             Convert.ToInt32(sqlReader["Time"]), Convert.ToSingle(sqlReader["Proteins"]),
                             Convert.ToSingle(sqlReader["Fats"]), Convert.ToSingle(sqlReader["Carbohydrates"]),
