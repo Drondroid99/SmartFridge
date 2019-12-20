@@ -24,7 +24,7 @@ namespace SmartFridge
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            FridgePage window = new FridgePage();
+            FridgeMenu window = new FridgeMenu();
             window.Show();
             //Close();
         }

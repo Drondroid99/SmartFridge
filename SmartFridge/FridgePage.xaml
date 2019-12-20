@@ -8,12 +8,29 @@
         d:DesignHeight="800" d:DesignWidth="1000"
       Title="Холодильник"
       FontFamily="Verdana">
-
+    
     
 
-
     <Grid>
-        
-        
+        <DataGrid Name="ProductsInFridge" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Width="175" 
+                             Binding="{Binding Path=Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Категория" 
+                             Binding="{Binding Path=Category}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Белки" 
+                             Binding="{Binding Path=Proteins}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Жиры" 
+                             Binding="{Binding Path=Fats}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Углеводы" 
+                             Binding="{Binding Path=Carbohydrates}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Калории" 
+                             Binding="{Binding Path=Calories}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
+        
+
+
+    
 </Window>

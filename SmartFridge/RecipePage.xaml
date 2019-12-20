@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:SmartFridge"
         mc:Ignorable="d"
         d:DesignHeight="1200" d:DesignWidth="1000"
-      Title="{Binding NameLabel}"
       FontFamily="Verdana">
     <ScrollViewer Background="White" Margin="60,20,60,20">
     
@@ -72,7 +71,7 @@
                     </DockPanel>
                     <DockPanel Grid.Row="5">
                         <Label Content="Срок годности:" DockPanel.Dock="Left" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>
-                        <Label Content="{Binding ExDateLabel, ValidatesOnExceptions=True, Converter={StaticResource DaysConverter}}" DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>
+                        <!--<Label Content="{Binding ExDateLabel, ValidatesOnExceptions=True, Converter={StaticResource DaysConverter}}" DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>-->
                     </DockPanel>
                 </Grid>
             </Border>
@@ -116,29 +115,14 @@
                     <TextBlock Margin="10" FontFamily="Verdana" TextWrapping="Wrap" Text="{Binding DescriptionText}" FontSize="14"/>
                 </ScrollViewer>
             </Border>
-            
-            
-
-            <Border Grid.Row="2" Grid.Column="0" Margin="30,100,-40,30" VerticalAlignment="Top" BorderThickness="2" BorderBrush="#8bc34a">
-                <ListView ItemsSource="{Binding IngredientsList}" SelectedItem="{Binding SelectedIngredient}" />
-            </Border>
-
-            <DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="30" AutoGenerateColumns="False" SelectionMode="Single" ItemsSource="{Binding IngredientsGrid}" CanUserDeleteRows="False" CanUserAddRows="False" >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Продукт" Binding="{Binding Title}" IsReadOnly="True" Width="150"/>
-                    <DataGridTextColumn Header="Категория" Binding="{Binding Type}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Мера" Binding="{Binding Measure}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Белки" Binding="{Binding Proteins, StringFormat={}{0:f} г}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Жиры" Binding="{Binding Fats, StringFormat={}{0:f} г}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Углеводы" Binding="{Binding Carbohydrates, StringFormat={}{0:f} г}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Калории" Binding="{Binding Calories, StringFormat={}{0:f} кКал}" IsReadOnly="True"/>
-                </DataGrid.Columns>
-            </DataGrid>
 
 
 
+                <Border Grid.Row="2" Grid.Column="0" Margin="30,100,-40,30" VerticalAlignment="Top" BorderThickness="2" BorderBrush="#8bc34a">
+                    <ListView ItemsSource="{Binding IngredientsList}" SelectedItem="{Binding SelectedIngredient}" />
+                </Border>
 
-        </Grid>
+            </Grid>
 
         <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Ингредиенты:" Margin="30,30,30,30" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16"/>
 

@@ -17,9 +17,19 @@ namespace SmartFridge
     /// </summary>
     public partial class FridgePage : Window
     {
+        
         public FridgePage()
         {
             InitializeComponent();
         }
     }
 }
+/* public partial class FridgePage : Window
+    {
+        private FridgePage(List<Product> products);
+        public FridgePage()
+        {
+            InitializeComponent();
+            Grid.ItemSource = new List<Product>(products);
+        }
+    }  */

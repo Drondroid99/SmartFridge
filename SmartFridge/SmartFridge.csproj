@@ -72,6 +72,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddProductToFridge.xaml.cs">
+      <DependentUpon>AddProductToFridge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DishesListInFridge.xaml.cs">
+      <DependentUpon>DishesListInFridge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FridgeMenu.xaml.cs">
+      <DependentUpon>FridgeMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="RecipePage.xaml.cs">
       <DependentUpon>RecipePage.xaml</DependentUpon>
@@ -82,6 +91,18 @@
     <Compile Include="RecipesMenuPage.xaml.cs">
       <DependentUpon>RecipesMenuPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddProductToFridge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DishesListInFridge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FridgeMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FridgePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
