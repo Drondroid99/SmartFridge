@@ -31,7 +31,7 @@ namespace SmartFridge
              string sqlExpression = "INSERT INTO Products( Name, Description, Category, Proteins, Fats, Carbohydrates, Calories,ExDate,Image)  VALUES(N'" +
                   Name.Text + "', N'" +
                   null + "', N'" +
-                  Convert.ToInt32(Category.Text) + "', N'" +
+                  GetCategoryIdByName(Category.Text) + "', N'" +
                   Convert.ToSingle(Proteins.Text) + "', '" +
                   Convert.ToSingle(Fats.Text) + "', '" +
                   Convert.ToSingle(Carbohydrates.Text) + "', '" +
@@ -48,6 +48,42 @@ namespace SmartFridge
             
         }
 
-       
+        private int GetCategoryIdByName(string name)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            var sqlConnection = new SqlConnection(connectionString);
+
+            sqlConnection.Open();
+
+            SqlDataReader sqlReader = null;
+
+            string sqlExpression = $"SELECT * FROM [Category_Products] WHERE CP_Name = N'{name}'";
+
+            var command = new SqlCommand(sqlExpression, sqlConnection);
+
+            var id = 0;
+
+            try
+            {
+                sqlReader = command.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    id = Convert.ToInt32(sqlReader["Id_CP"]);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message.ToString(), ex.Source.ToString());
+            }
+            finally
+            {
+                if (sqlReader != null)
+                    sqlReader.Close();
+            }
+
+            return id;
+        }
     }
 }

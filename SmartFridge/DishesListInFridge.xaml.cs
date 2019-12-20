@@ -74,7 +74,8 @@ namespace SmartFridge
         public Recepie SelectedRecipe { get; set; }
         private void list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var window = new RecipePage();
+            var p = ((sender as ListBox).SelectedItem as Recepie);
+            var window = new RecipePage(p.id_R);
             window.Show();
         }
     }

@@ -60,7 +60,7 @@
 
                     <DockPanel Grid.Row="3">
                         <Label Content="Вес одной порции:" DockPanel.Dock="Left" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>
-                        <Label Content="Weight"  DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>
+                        <Label Name="Weight"  DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>
                     </DockPanel>
 
                     <DockPanel Grid.Row="4">
@@ -100,46 +100,36 @@
                     <Image Source="Images/fats.png" Stretch="UniformToFill" Margin="10,10,10,10"/>
                     <Label Content="Жиры" VerticalAlignment="Center" FontFamily="Verdana"/>
                 </StackPanel>
-                <Label Grid.Row="2" Name="fats"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
+                <Label Grid.Row="2" Name="Fats"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
 
                 <StackPanel Grid.Row="3" Orientation="Horizontal">
                     <Image Source="Images/carbohydrate.png" Stretch="UniformToFill" Margin="10,10,10,10"/>
                     <Label Content="Углеводы" VerticalAlignment="Center" FontFamily="Verdana"/>
                 </StackPanel>
-                <Label Grid.Row="3" Name="Cardo"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
+                <Label Grid.Row="3" Name="Carbo"  VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Verdana"/>
             </Grid>
 
-            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Ингредиенты:" Margin="30,30,30,30" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="Ингредиенты:" Margin="30,30,30,30" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="3" BorderBrush="#8bc34a" FontFamily="Verdana" FontSize="16"/>
+            <DataGrid Grid.Row="1" Grid.Column="1" Margin="30 100 30 30" AutoGenerateColumns="False" SelectionMode="Single" Name="Ingredients" CanUserDeleteRows="False" CanUserAddRows="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Продукт" Binding="{Binding name}" IsReadOnly="True" Width="150"/>
+                    <DataGridTextColumn Header="Белки" Binding="{Binding proteins, StringFormat={}{0:f} г}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Жиры" Binding="{Binding fats, StringFormat={}{0:f} г}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Углеводы" Binding="{Binding carbohydrates, StringFormat={}{0:f} г}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Калории" Binding="{Binding calories, StringFormat={}{0:f} кКал}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Калории" Binding="{Binding quantity}" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Grid.Row="2" Grid.Column="0" Content="Приготовление:" FontSize="16" BorderThickness="2" BorderBrush="#8bc34a" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Top" FontFamily="Verdana"/>
 
-            <Border Grid.Row="2" Grid.Column="1" Margin="44.667,100,30,0" BorderThickness="3" BorderBrush="#8bc34a" MaxHeight="440" VerticalAlignment="Top" Height="261">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <DockPanel Grid.Row="1" >
-                        <Label Content="{Binding IngredientName}" DockPanel.Dock="Left" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>
-                        <Label Content="{Binding IngredientAmount}" DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="14"/>
-                    </DockPanel>
-                </ScrollViewer>
-            </Border>
-
-            <Label Grid.Row="3" Grid.Column="0" Content="Приготовление:" FontSize="16" BorderThickness="2" BorderBrush="#8bc34a" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Top" FontFamily="Verdana"/>
-
-            <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,50,30,30" VerticalAlignment="Top" BorderThickness="2" BorderBrush="#8bc34a">
+            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,50,30,30" VerticalAlignment="Top" BorderThickness="2" BorderBrush="#8bc34a">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <TextBlock Margin="10" FontFamily="Verdana" TextWrapping="Wrap" Name="Description" FontSize="14"/>
                 </ScrollViewer>
             </Border>
 
 
-            <DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="30" AutoGenerateColumns="False" SelectionMode="Single" ItemsSource="{Binding IngredientsGrid}" CanUserDeleteRows="False" CanUserAddRows="False" >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Продукт" Binding="{Binding Title}" IsReadOnly="True" Width="150"/>
-                    <DataGridTextColumn Header="Категория" Binding="{Binding Type}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Мера" Binding="{Binding Measure}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Белки" Binding="{Binding Proteins, StringFormat={}{0:f} г}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Жиры" Binding="{Binding Fats, StringFormat={}{0:f} г}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Углеводы" Binding="{Binding Carbohydrates, StringFormat={}{0:f} г}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Калории" Binding="{Binding Calories, StringFormat={}{0:f} кКал}" IsReadOnly="True"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            
         </Grid>
     </ScrollViewer>
 </Window>

@@ -83,6 +83,7 @@
     <Compile Include="FridgeMenu.xaml.cs">
       <DependentUpon>FridgeMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ingredient.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductsForRecepies.cs" />
     <Compile Include="Recepies.cs" />
